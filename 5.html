@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Letter</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      /* ADD YOUR BACKGROUND IMAGE HERE */
+      background-image: url('del8.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    body {
+      background: url('del8.jpeg') center center / cover no-repeat fixed;
+    }
+
+    .overlay {
+      min-height: 100vh;
+      width: 100%;
+      background: rgba(110, 15, 15, 0.78);
+      display: block;
+    }
+
+    .content {
+      width: 100%;
+      padding: 32px 26px 48px;
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 1.6;
+      letter-spacing: 0.2px;
+      position: relative;
+    }
+
+    .content p {
+      margin-bottom: 14px;
+    }
+
+    .scores div {
+      margin-bottom: 4px;
+    }
+    .next {
+      position:absolute;
+      bottom: 5px;
+      right: 30px;
+      color: #fff;
+      font-size: 30px;
+      opacity: 0.9;
+    }
+    .heart-top {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 18px;
+    }
+    /* PAGE TRANSITION EFFECT */
+body {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+.back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+  z-index: 999;
+  opacity: 0.85;
+}
+
+
+    .heart-bottom {
+      position: absolute;
+      bottom: 16px;
+      right: 14px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+    <a href="javascript:history.back()" class="back">←</a>
+
+  <div class="overlay">
+    <div class="content">
+      <div class="heart-top">❤️</div>
+
+      <p><b>shoo</b> njn appo muthl nammde karyma pryunnu.</p>
+
+      <p>ini ninne patty pryam kurech..</p>
+
+      <p>
+        nink oru thonal und that nee kollilenn, cheetha aanenn okke..
+        so let me make this very clear to you. njnkandathil vech ettavum
+        perfect cherkn neeya. sheriya nink enne handle chyan ariyilla but
+        nink ariyavo ninte kude verthe irunna thnne njn ok aakum.
+      </p>
+
+      <p>u r perfect bby, in all ways.</p>
+
+      <div class="scores">
+        <div>looks 10/10</div>
+        <div>body 10/10</div>
+        <div>hair 10/10</div>
+        <div>attitude 10/10</div>
+        <div>swabhavam 10/10</div>
+        <div>tholinja swabhavam 10/10</div>
+        <div>flirting 20/10 (enik valya thalprym illa ketto)</div>
+      </div>
+
+      <p>Do u even have any idea what u are to me?</p>
+
+      <p>prnj veruaanel…</p>
+
+      <p>
+        u r the panjasaara to my kapi,<br />
+        u r the machonaise to my mandhi,<br />
+        u r the lime to my soda,<br />
+        u r the masala to my maggi,<br />
+        u r the medicine to all my soked,<br />
+        u r the horlicks to my paal,<br />
+        u r the ghee to my toast,<br />
+        u r the lipstick to my lips.. oh alla sorry<br />
+        u r the lipstick remover to my lips. hehe…<br />
+        and alot more…
+      </p>
+
+      <div class="heart-bottom">❤️❤️</div>
+    </div>
+  </div>
+   <div class="block"></div>
+<div class="next">Next →</div>
+<a href="6.html" class="next">Next →</a>
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = this.href;
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = target;
+      }, 600);
+    });
+  });
+</script>
+
+</body>
+</html>

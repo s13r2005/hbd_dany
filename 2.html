@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memories</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+.next {
+      position:bottom;
+      bottom: 5px;
+      right: 30px;
+      color: #fff;
+      font-size: 30px;
+      opacity: 0.9;
+    }
+    body {
+      background: #430303;
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    
+    
+    .block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+/* PAGE TRANSITION EFFECT */
+body {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+    .text-box {
+      padding: 18px;
+      font-size: 40px;
+      line-height: 1.55;
+      color: #f5f5f5;
+      font-family: cursive;
+    }
+
+    .full-text {
+      padding: 18px;
+      font-size: 30px;
+      line-height: 1.55;
+    }
+
+    .center-text {
+      text-align: center;
+      padding: 18px 24px 28px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    img {
+  transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+.back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+  z-index: 999;
+  opacity: 0.85;
+}
+
+
+  </style>
+</head>
+
+<body>
+    <a href="javascript:history.back()" class="back">←</a>
+
+  <div class="story">
+
+    <!-- TOP SECTION -->
+    <div class="block">
+      <div class="img-box">
+        <img src="del17.jpeg" alt="memory">
+      </div>
+
+      <div class="text-box">
+        Remember the first time you<br>
+        texted me, “cuteness<br>
+        overloaded” correct aanen<br>
+        thonunnu.njan appozhum ortu<br>
+        kozhi aanen. i still talked.<br>
+        talked and talked and then<br>
+        talked again and talked all the<br>
+        time. you’re the first guy,<br>
+        actually the only guy,i got<br>
+        comfortable with after getting<br>
+        here
+      </div>
+    </div>
+
+    <!-- MIDDLE SECTION -->
+    <div class="block">
+      <div class="text-box">
+        now that i look back<br>
+        ellam nallathin aarnu.<br>
+        athkond enna<br>
+        nink nalla oru chundari kochine kitti ille hehe<br>
+        enik oru kuzhapam illatha chekkaneyum<br>
+        hah...ini enth aayalum nananju<br>
+       ini kilich irangam<br>
+        ingn msg aych aych, u hypnotized me<br>
+        with ur kindness and sweetness<br>
+        pinne alle arinje verum maayam aarnen.
+      </div>
+
+      <div class="img-box">
+        <img src="del16.jpeg" alt="memory">
+      </div>
+    </div>
+
+    <!-- BOTTOM TEXT -->
+   <div class="block">
+      <div class="img-box">
+        <img src="del15.jpeg" alt="memory">
+      </div>
+
+      <div class="text-box">
+      Pinn smsarich<br>
+      smsarich ninne<br>
+      ishtam aakitt nee<br>
+      enne ozhivaakan<br>
+      nokki alleda patty .<br><br>
+      “ninak nalla<br>
+      cherkane kittum”<br>
+      ath nee aano<br>
+      therumanikunne ..<br>
+      huh??
+    </div>
+<div class="block"></div>
+ <div class="text-box"></div>
+
+  </div>
+  <a href="3.html" class="next">Next →</a>
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = this.href;
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = target;
+      }, 600);
+    });
+  });
+</script>
+
+</body>
+</html>
